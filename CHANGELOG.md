@@ -6,6 +6,7 @@ Version and feature control
 
 * Installed Symfony 5.1 - Doc: https://symfony.com/doc/current/index.html
 * Installed doctrine - Doc: https://symfony.com/doc/current/doctrine.html
+* Created Generic entity with setters and getters
 
 ## v0.1
 
