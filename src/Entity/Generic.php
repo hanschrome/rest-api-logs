@@ -133,5 +133,202 @@ class Generic
      */
     private $observations;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getCreated(): ?\DateTimeInterface
+    {
+        return $this->created;
+    }
+
+    public function setCreated(\DateTimeInterface $created): self
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    public function getApplication(): ?string
+    {
+        return $this->application;
+    }
+
+    public function setApplication(?string $application): self
+    {
+        $this->application = $application;
+
+        return $this;
+    }
+
+    public function getLevel(): ?int
+    {
+        return $this->level;
+    }
+
+    public function setLevel(?int $level): self
+    {
+        $this->level = $level;
+
+        return $this;
+    }
+
+    public function getEnvironment(): ?string
+    {
+        return $this->environment;
+    }
+
+    public function setEnvironment(?string $environment): self
+    {
+        $this->environment = $environment;
+
+        return $this;
+    }
+
+    public function getScope(): ?string
+    {
+        return $this->scope;
+    }
+
+    public function setScope(?string $scope): self
+    {
+        $this->scope = $scope;
+
+        return $this;
+    }
+
+    public function getFilename(): ?string
+    {
+        return $this->filename;
+    }
+
+    public function setFilename(?string $filename): self
+    {
+        $this->filename = $filename;
+
+        return $this;
+    }
+
+    public function getLine(): ?int
+    {
+        return $this->line;
+    }
+
+    public function setLine(?int $line): self
+    {
+        $this->line = $line;
+
+        return $this;
+    }
+
+    public function getDebugBackTrace(): ?string
+    {
+        return $this->debugBackTrace;
+    }
+
+    public function setDebugBackTrace(?string $debugBackTrace): self
+    {
+        $this->debugBackTrace = $debugBackTrace;
+
+        return $this;
+    }
+
+    public function getSession(): ?string
+    {
+        return $this->session;
+    }
+
+    public function setSession(?string $session): self
+    {
+        $this->session = $session;
+
+        return $this;
+    }
+
+    public function getClient(): ?string
+    {
+        return $this->client;
+    }
+
+    public function setClient(?string $client): self
+    {
+        $this->client = $client;
+
+        return $this;
+    }
+
+    public function getException(): ?string
+    {
+        return $this->exception;
+    }
+
+    public function setException(?string $exception): self
+    {
+        $this->exception = $exception;
+
+        return $this;
+    }
+
+    public function getError(): ?string
+    {
+        return $this->error;
+    }
+
+    public function setError(?string $error): self
+    {
+        $this->error = $error;
+
+        return $this;
+    }
+
+    public function getMessage(): ?string
+    {
+        return $this->message;
+    }
+
+    public function setMessage(?string $message): self
+    {
+        $this->message = $message;
+
+        return $this;
+    }
+
+    public function getVars(): ?string
+    {
+        return $this->vars;
+    }
+
+    public function setVars(?string $vars): self
+    {
+        $this->vars = $vars;
+
+        return $this;
+    }
+
+    public function getEventTrace(): ?string
+    {
+        return $this->eventTrace;
+    }
+
+    public function setEventTrace(?string $eventTrace): self
+    {
+        $this->eventTrace = $eventTrace;
+
+        return $this;
+    }
+
+    public function getObservations(): ?string
+    {
+        return $this->observations;
+    }
+
+    public function setObservations(?string $observations): self
+    {
+        $this->observations = $observations;
+
+        return $this;
+    }
+
 
 }
