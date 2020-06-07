@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="App\Entity\Generic" table="generic">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="created" type="datetime" column="created" nullable="false">
+      <options>
+        <option name="comment">Creation date</option>
+        <option name="default">CURRENT_TIMESTAMP</option>
+      </options>
+    </field>
+    <field name="application" type="string" column="application" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Application label in order to identify which application is being logged</option>
+      </options>
+    </field>
+    <field name="level" type="integer" column="level" nullable="true">
+      <options>
+        <option name="unsigned"/>
+        <option name="comment">0 DEBUG, 1 WARN, 2 ERROR, 3 FATAL, 4 CRITICAL, 5 TRACE</option>
+      </options>
+    </field>
+    <field name="environment" type="string" column="environment" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Environment: dev, qa, pre, pro</option>
+      </options>
+    </field>
+    <field name="scope" type="string" column="scope" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Abstract layer: CLIENT_API, PAYPAL_API, vendor, ...</option>
+      </options>
+    </field>
+    <field name="filename" type="string" column="filename" length="3000" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Absolute path for filename</option>
+      </options>
+    </field>
+    <field name="line" type="integer" column="line" nullable="true">
+      <options>
+        <option name="unsigned"/>
+        <option name="comment">File line</option>
+      </options>
+    </field>
+    <field name="debugBackTrace" type="text" column="debug_back_trace" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Exception trace</option>
+      </options>
+    </field>
+    <field name="session" type="string" column="session" length="3000" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Session data such user id, token...</option>
+      </options>
+    </field>
+    <field name="client" type="string" column="client" length="3000" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Client data such user-agent, ip, ...</option>
+      </options>
+    </field>
+    <field name="exception" type="string" column="exception" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Name of the exception such InternalErrorException, InvalidArgumentsException, ...</option>
+      </options>
+    </field>
+    <field name="error" type="string" column="error" length="250" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Error tag to identify same errors such LOGIN_FAILED, DATABASE_CONNECTION, ...</option>
+      </options>
+    </field>
+    <field name="message" type="string" column="message" length="3000" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Exception message thrown by the exception system</option>
+      </options>
+    </field>
+    <field name="vars" type="string" column="vars" length="3000" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Variable data, json encoded recommended</option>
+      </options>
+    </field>
+    <field name="eventTrace" type="text" column="event_trace" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Custom trace of events in json, for example: ["Validated parameters", "Validated args", "Loaded information", "Save information"]</option>
+      </options>
+    </field>
+    <field name="observations" type="string" column="observations" length="3000" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Observations, any kind of information that does not fit with fields</option>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>
