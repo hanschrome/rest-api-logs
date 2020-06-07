@@ -13,7 +13,7 @@ Version and feature control
 Example POST data:
 
 {
-	"application": "solidjobs",
+	"application": "hugyourartist",
 	"level": 0,
 	"environment": "dev",
 	"scope": "API_PAYPAL",
