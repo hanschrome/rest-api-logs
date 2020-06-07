@@ -7,3 +7,4 @@ Version and feature control
 * Added composer
 * Added README
 * Added CHANGELOG
+* Installed Symfony 5.1
